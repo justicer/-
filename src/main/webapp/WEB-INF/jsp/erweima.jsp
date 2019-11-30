@@ -55,15 +55,6 @@ var arrayObj = new Array();// 定义全局数组
 $(document).keydown(function (event) {
 	        if (event.keyCode == 13) {
 	                var po = $("#code").val();
-	/* var po1 = $("#code1").val();
-					var id = po1 + po;
-					if(arrayObj.length <= 144){
-						arrayObj.push(id);
-						$("#code").val('');
-						$("#tip").text("");
-					}else{
-						$("#tip").text("提示:你输入的个数已经超出文档存储的总数，请先导出！");
-					} */
 					if(po != "" && po.length == 4){
 						var po1 = $("#code1").val();
 						var id = po1 + po;
@@ -85,15 +76,6 @@ function addCode(){
 	
 	var po = $("#code").val();
 	
-	/* var po1 = $("#code1").val();
-	var id = po1 + po;
-	if(arrayObj.length <= 144){
-		arrayObj.push(id);
-		$("#code").val('');
-		$("#tip").text("");
-	}else{
-		$("#tip").text("提示:你输入的个数已经超出文档存储的总数，请先导出！");
-	} */
 	if(po != ""){
 		var po1 = $("#code1").val();
 		var id = po1 + po;
@@ -113,7 +95,7 @@ function addCode(){
 //导出word
 function tijiao(){
 	
-	for(var o=1;o<145;o++){
+	/* for(var o=1;o<145;o++){
 		if(o.toString().length == 1){
 			arrayObj.push("1908000"+o);
 		}else if(o.toString().length == 2){
@@ -121,7 +103,7 @@ function tijiao(){
 		}else if(o.toString().length == 3){
 			arrayObj.push("19080"+o);
 		}
-	}
+	} */
 	
 	//  判断导出的数据是否为空
 	if(arrayObj.length != 0){
